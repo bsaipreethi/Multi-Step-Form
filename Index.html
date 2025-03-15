@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="form-container mb-3 row">
+      <div class="progress-bar">
+        <div class="step active">1</div>
+        <div class="step">2</div>
+        <div class="step">3</div>
+      </div>
+      <form id="multiStepForm">
+        <!-- Step 1: Basic Details -->
+        <div class="form-step active">
+          <h2>Personal Information</h2>
+          <label>Name:</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+          <label>Date of Birth:</label>
+          <input type="date" id="dob" />
+          <label
+            >Gender:
+            <select id="gender">
+              <option value="">Select</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </label>
+          <p class="error-message"></p>
+          <button type="button" id="next1">Next</button>
+        </div>
+
+        <!-- Step 2: Contact Info -->
+        <div class="form-step">
+          <h2>Contact Info</h2>
+          <label
+            >Email:
+            <input type="email" id="email" placeholder="example@gmail.com"
+          /></label>
+          <label>Phone: <input type="tel" id="phone" /></label>
+          <label>Address: <input type="text" id="address" /></label>
+          <p class="error-message"></p>
+          <button type="button" id="back1">Back</button>
+          <button type="button" id="next2">Next</button>
+        </div>
+
+        <!-- Step 3: Summary & Submit -->
+        <div class="form-step">
+          <h2>Summary</h2>
+          <div id="summary"></div>
+          <button type="button" id="back2">Back</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
